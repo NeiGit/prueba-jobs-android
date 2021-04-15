@@ -21,9 +21,9 @@ public class RealmActivity extends Application {
                 .allowWritesOnUiThread(true)
                 .build();
         Realm.setDefaultConfiguration(config);
-        RealmTest realmTest = new RealmTest();
+       /* RealmTest realmTest = new RealmTest();
         realmTest.run();
         realmTest.destroy();
-        realmTest = null;
+        realmTest = null;*/
     }
 }

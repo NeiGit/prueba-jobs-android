@@ -18,8 +18,6 @@ import io.realm.annotations.PrimaryKey;
 import lombok.Getter;
 import lombok.Setter;
 
-@Getter
-@Setter
 public class Workout extends RealmObject {
     @PrimaryKey
     private ObjectId _id = new ObjectId();
@@ -85,5 +83,65 @@ public class Workout extends RealmObject {
     public List<Set> getRounds() {
         Set.Parser parser = new Set.Parser();
         return rounds.stream().map(parser::fromString).collect(Collectors.toList());
+    }
+
+    public ObjectId get_id() {
+        return _id;
+    }
+
+    public void set_id(ObjectId _id) {
+        this._id = _id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public String getComment() {
+        return comment;
+    }
+
+    public void setComment(String comment) {
+        this.comment = comment;
+    }
+
+    public void setRounds(RealmList<String> rounds) {
+        this.rounds = rounds;
+    }
+
+    public String getExercises() {
+        return exercises;
+    }
+
+    public void setExercises(String exercises) {
+        this.exercises = exercises;
+    }
+
+    public String getMuscles() {
+        return muscles;
+    }
+
+    public void setMuscles(String muscles) {
+        this.muscles = muscles;
     }
 }

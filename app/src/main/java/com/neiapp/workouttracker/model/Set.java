@@ -13,8 +13,6 @@ import java.util.stream.Collectors;
 import lombok.Getter;
 import lombok.Setter;
 
-@Getter
-@Setter
 public class Set implements Jsonable {
     private String title;
     private Exercise exercise;
@@ -65,6 +63,78 @@ public class Set implements Jsonable {
 
     public void addSet(Set set) {
         this.sets.add(set);
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public Exercise getExercise() {
+        return exercise;
+    }
+
+    public void setExercise(Exercise exercise) {
+        this.exercise = exercise;
+    }
+
+    public Integer getReps() {
+        return reps;
+    }
+
+    public void setReps(Integer reps) {
+        this.reps = reps;
+    }
+
+    public Float getWeight() {
+        return weight;
+    }
+
+    public void setWeight(Float weight) {
+        this.weight = weight;
+    }
+
+    public Float getRest() {
+        return rest;
+    }
+
+    public void setRest(Float rest) {
+        this.rest = rest;
+    }
+
+    public Float getDistance() {
+        return distance;
+    }
+
+    public void setDistance(Float distance) {
+        this.distance = distance;
+    }
+
+    public Float getTime() {
+        return time;
+    }
+
+    public void setTime(Float time) {
+        this.time = time;
+    }
+
+    public String getComment() {
+        return comment;
+    }
+
+    public void setComment(String comment) {
+        this.comment = comment;
+    }
+
+    public List<Set> getSets() {
+        return sets;
+    }
+
+    public void setSets(List<Set> sets) {
+        this.sets = sets;
     }
 
     public static class Parser implements Parseable<Set> {

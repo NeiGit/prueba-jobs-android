@@ -16,8 +16,6 @@ import io.realm.annotations.PrimaryKey;
 import lombok.Getter;
 import lombok.Setter;
 
-@Getter
-@Setter
 public class Exercise extends RealmObject implements Jsonable {
     @PrimaryKey
     private ObjectId _id = new ObjectId();
@@ -41,6 +39,30 @@ public class Exercise extends RealmObject implements Jsonable {
         } catch (JSONException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public ObjectId get_id() {
+        return _id;
+    }
+
+    public void set_id(ObjectId _id) {
+        this._id = _id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public RealmList<String> getMuscles() {
+        return muscles;
+    }
+
+    public void setMuscles(RealmList<String> muscles) {
+        this.muscles = muscles;
     }
 
     public static class Parser implements Parseable<Exercise> {
