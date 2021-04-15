@@ -4,10 +4,8 @@ import android.app.Application;
 
 import io.realm.Realm;
 import io.realm.RealmConfiguration;
-import lombok.SneakyThrows;
 
 public class RealmActivity extends Application {
-    @SneakyThrows
     @Override
     public void onCreate() {
         super.onCreate();

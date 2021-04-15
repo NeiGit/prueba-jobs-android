@@ -4,8 +4,6 @@ import org.bson.types.ObjectId;
 
 import io.realm.RealmObject;
 import io.realm.annotations.PrimaryKey;
-import lombok.Getter;
-import lombok.Setter;
 
 public class Muscle extends RealmObject {
     @PrimaryKey
