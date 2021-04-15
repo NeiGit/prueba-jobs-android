@@ -18,6 +18,7 @@ public class SetTest {
 
         String jsonSet = expectedSet.toJson();
 
+
         assertThat(jsonSet).isNotBlank();
 
         Set actualSet = new Set.Parser().fromString(jsonSet);
